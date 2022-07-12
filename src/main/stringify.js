@@ -54,3 +54,15 @@ export function dec(node) {
         .replaceAll("_PROP_", node.prop)
         .replaceAll("_VALUE_", valueC);
 }
+
+export function param(node) {
+    if(node.type !== "param") return unexpected(node);
+
+    if(node.default) {
+        return data.paramDefault
+            .replaceAll("_NAME_", node.name)
+            .replaceAll("_DEFAULT_", node.default);
+    }
+
+    return data.param.replaceAll("_NAME_", node.name);
+}
