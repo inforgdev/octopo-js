@@ -34,3 +34,13 @@ export function exp(node) {
             return unexpected(node);
     }
 }
+
+export function v(node) {
+    if(node.type !== "v") return unexpected(node);
+    
+    let expressionC = exp(node.expression);
+
+    return data.v
+        .replaceAll("_NAME_", node.name)
+        .replaceAll("_EXPRESSION_", expressionC);
+}
