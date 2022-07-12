@@ -70,3 +70,16 @@ export function args(...expressions) {
 
     return a;
 }
+
+export function params(...expressions) {
+    let a = [];
+    
+    for(let i in expressions) {
+        let expression = expressions[i];
+        let name = expression[0];
+        let defaultValue = expression[1];
+        a.push(param(name, defaultValue));
+    }
+
+    return a;
+}
