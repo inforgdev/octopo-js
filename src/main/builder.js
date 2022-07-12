@@ -42,3 +42,12 @@ export function ref(name) {
         "name": name,
     };
 }
+
+export function mixin(name, params, body) {
+    return {
+        "type": "mixin",
+        "name": name,
+        "params": params,
+        "body": body,
+    };
+}
