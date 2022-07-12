@@ -85,3 +85,17 @@ export function arg(node) {
     if(node.type !== "arg") return unexpected(node);
     return exp(node.expression);
 }
+
+export function args(exp) {
+    let a = [];
+
+    if(!Array.isArray(exp)) {
+        a.push(arg(exp));
+    } else {
+        for(let i in exp) {
+            a.push(arg(exp[i]));
+        }
+    }
+
+    return a.join(data.argSep);
+}
