@@ -9,7 +9,7 @@ export default function stringify(options) {
     if(ast === undefined) return propUndefined("options.in.data");
     if(data === undefined) return propUndefined("options.proc.data");
 
-    return "";
+    return globalStatements(ast);
 }
 
 export function ref(node) {
