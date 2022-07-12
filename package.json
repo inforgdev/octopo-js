@@ -1,10 +1,12 @@
 {
     "name": "octopo-js",
-    "version": "0.14.4",
+    "version": "0.14.5",
     "description": "OctopoJS is a CSS preprocessor AST stringifier",
     "main": "./src/main/octopo.js",
     "type": "module",
-    "scripts": {},
+    "scripts": {
+        "main:compile": "rollup --config rollup.config.js"
+    },
     "keywords": [
         "css",
         "ast",
@@ -17,5 +19,8 @@
     "author": "inforgdev <contact@inforg.dev>",
     "homepage": "https://github.com/inforgdev/octopo-js",
     "license": "SEE LICENSE IN LICENSE.md",
-    "devDependencies": {}
+    "devDependencies": {
+        "rollup": "^2.76.0",
+        "rollup-plugin-node-resolve": "^5.2.0"
+    }
 }
