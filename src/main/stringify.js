@@ -11,3 +11,8 @@ export default function stringify(options) {
 
     return "";
 }
+
+export function ref(node) {
+    if(node.type !== "ref") return unexpected(node);
+    return data.ref.replaceAll("_NAME_", node.name);
+}
