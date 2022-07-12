@@ -80,3 +80,8 @@ export function params(exp) {
 
     return a.join(data.paramSep);
 }
+
+export function arg(node) {
+    if(node.type !== "arg") return unexpected(node);
+    return exp(node.expression);
+}
