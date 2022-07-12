@@ -7,7 +7,7 @@ export default {
     needLastStatementEnd: true,
     needBrln: true,
     v: "$_NAME_: _EXPRESSION_",
-    dec: "_NAME_: _EXPRESSION_",
+    dec: "_PROP_: _VALUE_",
     call: "@include _NAME_(_ARGS_)",
     argSep: ", ",
     arg: "",
