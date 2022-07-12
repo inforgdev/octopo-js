@@ -66,3 +66,17 @@ export function param(node) {
 
     return data.param.replaceAll("_NAME_", node.name);
 }
+
+export function params(exp) {
+    let a = [];
+
+    if(!Array.isArray(exp)) {
+        a.push(param(exp));
+    } else {
+        for(let i in exp) {
+            a.push(param(exp[i]));
+        }
+    }
+
+    return a.join(data.paramSep);
+}
