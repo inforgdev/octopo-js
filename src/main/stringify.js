@@ -99,3 +99,11 @@ export function args(exp) {
 
     return a.join(data.argSep);
 }
+
+export function call(node) {
+    if(node.type !== "call") return unexpected(node);
+
+    return data.call
+        .replace("_NAME_", node.name)
+        .replaceAll("_ARGS_", args(node.args));
+}
