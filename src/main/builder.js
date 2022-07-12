@@ -35,3 +35,10 @@ export function val(expression) {
         "expression": expression,
     };
 }
+
+export function ref(name) {
+    return {
+        "type": "ref",
+        "name": name,
+    };
+}
