@@ -44,3 +44,13 @@ export function v(node) {
         .replaceAll("_NAME_", node.name)
         .replaceAll("_EXPRESSION_", expressionC);
 }
+
+export function dec(node) {
+    if(node.type !== "dec") return unexpected(node);
+
+    let valueC = exp(node.value);
+
+    return data.dec
+        .replaceAll("_PROP_", node.prop)
+        .replaceAll("_VALUE_", valueC);
+}
