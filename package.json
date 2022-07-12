@@ -1,0 +1,21 @@
+{
+    "name": "octopo-js",
+    "version": "0.0.0",
+    "description": "OctopoJS is a CSS preprocessor AST stringifier",
+    "main": "./src/main/octopo.js",
+    "type": "module",
+    "scripts": {},
+    "keywords": [
+        "css",
+        "ast",
+        "stringifier",
+        "less",
+        "scss",
+        "sass",
+        "stylus"
+    ],
+    "author": "inforgdev <contact@inforg.dev>",
+    "homepage": "https://github.com/inforgdev/octopo-js",
+    "license": "SEE LICENSE IN LICENSE.md",
+    "devDependencies": {}
+}
