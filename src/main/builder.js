@@ -59,3 +59,14 @@ export function param(name, defaultValue) {
         "default": defaultValue,
     };
 }
+
+export function args(...expressions) {
+    let a = [];
+
+    for(let i in expressions) {
+        let expression = expressions[i];
+        a.push(arg(expression));
+    }
+
+    return a;
+}
