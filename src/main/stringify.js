@@ -108,10 +108,6 @@ export function call(node) {
         .replaceAll("_ARGS_", args(node.args));
 }
 
-export function body() {
-    return "";
-}
-
 export function mixin(node) {
     if(node.type !== "mixin") return unexpected(node);
 
@@ -123,4 +119,40 @@ export function mixin(node) {
     if(data.needBrln) mixinC = mixinC + "\n";
 
     return mixinC;
+}
+
+export function body(node) {
+    let body = node;
+    let bodyC = "";
+
+    for(let i in body) {
+        let statement = body[i];
+
+        let sta;
+
+        switch(statement.type) {
+            case "call":
+                sta = call(statement);
+                break;
+            case "v":
+                sta = v(statement);
+                break;
+            case "dec":
+                sta = dec(statement);
+                break;
+            case "mixin":
+                sta = mixin(statement);
+                break;
+            default:
+                return unexpected(statement);
+        }
+
+        let ender = data.statementEnd;
+        if(i == body.length - 1 && !data.needLastStatementEnd) ender = "";
+        if(data.needBrln) ender = ender + "\n";
+
+        bodyC = bodyC + data.indent + sta + ender;
+    }
+
+    return bodyC;
 }
