@@ -20,3 +20,11 @@ export function dec(prop, value) {
         "value": value,
     };
 }
+
+export function v(name, expression) {
+    return {
+        "type": "v",
+        "name": name,
+        "expression": expression,
+    };
+}
