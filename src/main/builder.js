@@ -28,3 +28,10 @@ export function v(name, expression) {
         "expression": expression,
     };
 }
+
+export function val(expression) {
+    return {
+        "type": "val",
+        "expression": expression,
+    };
+}
