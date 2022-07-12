@@ -107,3 +107,7 @@ export function call(node) {
         .replace("_NAME_", node.name)
         .replaceAll("_ARGS_", args(node.args));
 }
+
+export function body() {
+    return "";
+}
