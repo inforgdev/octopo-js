@@ -13,3 +13,20 @@ export default function stringifyFile(options) {
     const data = stringify(options);
     writeFileResolve(data, options.out.file);
 }
+
+export function handleWriteFile(data, options) {
+    function handleDefaultOptions(
+        dirname = "./dist/",
+        name = "concrete",
+        extname = options.proc.data.extname
+    ) {
+        options.out.file.dirname = dirname;
+        options.out.file.name = name;
+        options.out.file.extname = extname;
+    }
+
+    const fileOptions = options.out.file;
+    handleDefaultOptions(fileOptions.dirname, fileOptions.name, fileOptions.extname);
+
+    writeFileResolve(data, fileOptions);
+}
