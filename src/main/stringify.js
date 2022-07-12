@@ -16,3 +16,8 @@ export function ref(node) {
     if(node.type !== "ref") return unexpected(node);
     return data.ref.replaceAll("_NAME_", node.name);
 }
+
+export function val(node) {
+    if(node.type !== "val") return unexpected(node);
+    return data.val.replaceAll("_NAME_", node.expression);
+}
