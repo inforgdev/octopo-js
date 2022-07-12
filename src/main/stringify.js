@@ -156,3 +156,35 @@ export function body(node) {
 
     return bodyC;
 }
+
+export function globalStatements(ast) {
+    let rootC = "";
+
+    for(let i in ast) {
+        let node = ast[i];
+        
+        let sta;
+
+        switch(node.type) {
+            case "call":
+                sta = call(node);
+                break;
+            case "v":
+                sta = v(node);
+                break;
+            case "mixin":
+                sta = mixin(node);
+                break;
+            default:
+                return unexpected(node);
+        }
+
+        let ender = data.statementEnd;
+        if(i == ast.length - 1 && !data.needLastStatementEnd || node.type === "mixin") ender = "";
+        if(data.needBrln && node.type !== "mixin") ender = ender + "\n";
+
+        rootC = rootC + sta + ender;
+    }
+
+    return rootC;
+}
