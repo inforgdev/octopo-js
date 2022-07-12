@@ -12,3 +12,11 @@ export function arg(expression) {
         "expression": expression,
     };
 }
+
+export function dec(prop, value) {
+    return {
+        "type": "dec",
+        "prop": prop,
+        "value": value,
+    };
+}
