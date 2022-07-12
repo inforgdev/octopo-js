@@ -21,3 +21,16 @@ export function val(node) {
     if(node.type !== "val") return unexpected(node);
     return data.val.replaceAll("_NAME_", node.expression);
 }
+
+export function exp(node) {
+    if(node === undefined) return unexpected(node);
+
+    switch(node.type) {
+        case "ref":
+            return ref(node);
+        case "val":
+            return val(node);
+        default:
+            return unexpected(node);
+    }
+}
