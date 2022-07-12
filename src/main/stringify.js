@@ -111,3 +111,16 @@ export function call(node) {
 export function body() {
     return "";
 }
+
+export function mixin(node) {
+    if(node.type !== "mixin") return unexpected(node);
+
+    let mixinC = data.mixin
+        .replaceAll("_NAME_", node.name)
+        .replaceAll("_PARAMS_", params(node.params))
+        .replaceAll("_BODY_", body(node.body));
+
+    if(data.needBrln) mixinC = mixinC + "\n";
+
+    return mixinC;
+}
