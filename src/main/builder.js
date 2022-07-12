@@ -51,3 +51,11 @@ export function mixin(name, params, body) {
         "body": body,
     };
 }
+
+export function param(name, defaultValue) {
+    return {
+        "type": "param",
+        "name": name,
+        "default": defaultValue,
+    };
+}
