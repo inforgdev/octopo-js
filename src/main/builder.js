@@ -1,4 +1,4 @@
-export function call(name, args) {
+export function _call(name, args) {
     return {
         "type": "call",
         "name": name,
@@ -6,14 +6,14 @@ export function call(name, args) {
     };
 }
 
-export function arg(expression) {
+export function _arg(expression) {
     return {
         "type": "arg",
         "expression": expression,
     };
 }
 
-export function dec(prop, value) {
+export function _dec(prop, value) {
     return {
         "type": "dec",
         "prop": prop,
@@ -21,7 +21,7 @@ export function dec(prop, value) {
     };
 }
 
-export function v(name, expression) {
+export function _var(name, expression) {
     return {
         "type": "v",
         "name": name,
@@ -29,21 +29,21 @@ export function v(name, expression) {
     };
 }
 
-export function val(expression) {
+export function _val(expression) {
     return {
         "type": "val",
         "expression": expression,
     };
 }
 
-export function ref(name) {
+export function _ref(name) {
     return {
         "type": "ref",
         "name": name,
     };
 }
 
-export function mixin(name, params, body) {
+export function _mixin(name, params, body) {
     return {
         "type": "mixin",
         "name": name,
@@ -52,7 +52,7 @@ export function mixin(name, params, body) {
     };
 }
 
-export function param(name, defaultValue) {
+export function _param(name, defaultValue) {
     return {
         "type": "param",
         "name": name,
@@ -60,25 +60,25 @@ export function param(name, defaultValue) {
     };
 }
 
-export function args(...expressions) {
+export function _args(...expressions) {
     let a = [];
 
     for(let i in expressions) {
         let expression = expressions[i];
-        a.push(arg(expression));
+        a.push(_arg(expression));
     }
 
     return a;
 }
 
-export function params(...expressions) {
+export function _params(...expressions) {
     let a = [];
     
     for(let i in expressions) {
         let expression = expressions[i];
         let name = expression[0];
         let defaultValue = expression[1];
-        a.push(param(name, defaultValue));
+        a.push(_param(name, defaultValue));
     }
 
     return a;
