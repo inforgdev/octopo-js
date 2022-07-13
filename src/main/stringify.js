@@ -9,53 +9,53 @@ export default function stringify(options) {
     if(ast === undefined) return propUndefined("options.in.data");
     if(data === undefined) return propUndefined("options.proc.data");
 
-    return globalStatements(ast, data);
+    return $globalStatements(ast, data);
 }
 
-export function ref(node, lang = data) {
+export function $ref(node, lang = data) {
     if(node.type !== "ref") return unexpected(node);
     return lang.ref.replaceAll("_NAME_", node.name);
 }
 
-export function val(node, lang = data) {
+export function $val(node, lang = data) {
     if(node.type !== "val") return unexpected(node);
     return lang.val.replaceAll("_NAME_", node.expression);
 }
 
-export function exp(node, lang = data) {
+export function $exp(node, lang = data) {
     if(node === undefined) return unexpected(node);
 
     switch(node.type) {
         case "ref":
-            return ref(node, lang);
+            return $ref(node, lang);
         case "val":
-            return val(node, lang);
+            return $val(node, lang);
         default:
             return unexpected(node);
     }
 }
 
-export function v(node, lang = data) {
+export function $var(node, lang = data) {
     if(node.type !== "v") return unexpected(node);
     
-    let expressionC = exp(node.expression, lang);
+    let expressionC = $exp(node.expression, lang);
 
     return lang.var
         .replaceAll("_NAME_", node.name)
         .replaceAll("_EXPRESSION_", expressionC);
 }
 
-export function dec(node, lang = data) {
+export function $dec(node, lang = data) {
     if(node.type !== "dec") return unexpected(node);
 
-    let valueC = exp(node.value, lang);
+    let valueC = $exp(node.value, lang);
 
     return lang.dec
         .replaceAll("_PROP_", node.prop)
         .replaceAll("_VALUE_", valueC);
 }
 
-export function param(node, lang = data) {
+export function $param(node, lang = data) {
     if(node.type !== "param") return unexpected(node);
 
     if(node.default) {
@@ -67,61 +67,61 @@ export function param(node, lang = data) {
     return lang.param.replaceAll("_NAME_", node.name);
 }
 
-export function params(exp, lang = data) {
+export function $params(exp, lang = data) {
     let a = [];
 
     if(!Array.isArray(exp)) {
-        a.push(param(exp, lang));
+        a.push($param(exp, lang));
     } else {
         for(let i in exp) {
-            a.push(param(exp[i], lang));
+            a.push($param(exp[i], lang));
         }
     }
 
     return a.join(lang.paramSep);
 }
 
-export function arg(node, lang = data) {
+export function $arg(node, lang = data) {
     if(node.type !== "arg") return unexpected(node);
-    return exp(node.expression, lang);
+    return $exp(node.expression, lang);
 }
 
-export function args(exp, lang = data) {
+export function $args(exp, lang = data) {
     let a = [];
 
     if(!Array.isArray(exp)) {
-        a.push(arg(exp, lang));
+        a.push($arg(exp, lang));
     } else {
         for(let i in exp) {
-            a.push(arg(exp[i], lang));
+            a.push($arg(exp[i], lang));
         }
     }
 
     return a.join(lang.argSep);
 }
 
-export function call(node, lang = data) {
+export function $call(node, lang = data) {
     if(node.type !== "call") return unexpected(node);
 
     return lang.call
         .replace("_NAME_", node.name)
-        .replaceAll("_ARGS_", args(node.args, lang));
+        .replaceAll("_ARGS_", $args(node.args, lang));
 }
 
-export function mixin(node, lang = data) {
+export function $mixin(node, lang = data) {
     if(node.type !== "mixin") return unexpected(node);
 
     let mixinC = lang.mixin
         .replaceAll("_NAME_", node.name)
-        .replaceAll("_PARAMS_", params(node.params, lang))
-        .replaceAll("_BODY_", body(node.body, lang));
+        .replaceAll("_PARAMS_", $params(node.params, lang))
+        .replaceAll("_BODY_", $body(node.body, lang));
 
     if(lang.needBrln) mixinC = mixinC + "\n";
 
     return mixinC;
 }
 
-export function body(node, lang = data) {
+export function $body(node, lang = data) {
     let body = node;
     let bodyC = "";
 
@@ -132,16 +132,16 @@ export function body(node, lang = data) {
 
         switch(statement.type) {
             case "call":
-                sta = call(statement, lang);
+                sta = $call(statement, lang);
                 break;
             case "v":
-                sta = v(statement, lang);
+                sta = $var(statement, lang);
                 break;
             case "dec":
-                sta = dec(statement, lang);
+                sta = $dec(statement, lang);
                 break;
             case "mixin":
-                sta = mixin(statement, lang);
+                sta = $mixin(statement, lang);
                 break;
             default:
                 return unexpected(statement);
@@ -157,7 +157,7 @@ export function body(node, lang = data) {
     return bodyC;
 }
 
-export function globalStatements(ast, lang = data) {
+export function $globalStatements(ast, lang = data) {
     let rootC = "";
 
     for(let i in ast) {
@@ -167,13 +167,13 @@ export function globalStatements(ast, lang = data) {
 
         switch(node.type) {
             case "call":
-                sta = call(node, lang);
+                sta = $call(node, lang);
                 break;
             case "v":
-                sta = v(node, lang);
+                sta = $var(node, lang);
                 break;
             case "mixin":
-                sta = mixin(node, lang);
+                sta = $mixin(node, lang);
                 break;
             default:
                 return unexpected(node);
