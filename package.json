@@ -1,6 +1,6 @@
 {
     "name": "octopo-js",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "description": "OctopoJS is a CSS preprocessor AST stringifier",
     "main": "./dist/octopo.min.js",
     "type": "module",
