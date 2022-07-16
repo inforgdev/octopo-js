@@ -11,8 +11,8 @@ OctopoJS is a CSS preprocessor AST stringifier.
 Input (*./src/example/example.js*):
 
 ```js
-import octopo, { langs, builder } from "octopo-js";
-const { _var, _val } = builder;
+import octopo, { langs, factory } from "octopo-js";
+const { _var, _val } = factory;
 const lang = langs.scss;
 
 const colors = [];
