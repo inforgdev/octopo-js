@@ -4,10 +4,10 @@ let data;
 
 export default function stringify(options) {
     let ast = options.in.data;
-    data = options.proc.data;
+    data = options.in.grammar;
 
     if(ast === undefined) return propUndefined("options.in.data");
-    if(data === undefined) return propUndefined("options.proc.data");
+    if(data === undefined) return propUndefined("options.in.grammar");
 
     return $globalStatements(ast, data);
 }
