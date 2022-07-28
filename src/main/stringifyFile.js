@@ -18,7 +18,7 @@ export function handleWriteFile(data, options) {
     function handleDefaultOptions(
         dirname = "./dist/",
         name = "concrete",
-        extname = options.in.grammar.extname
+        extname = options.proc.grammar.extname
     ) {
         options.out.file.dirname = dirname;
         options.out.file.name = name;
