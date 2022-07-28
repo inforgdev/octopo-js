@@ -4,7 +4,7 @@ import { terser } from "rollup-plugin-terser";
 export default {
     input: "./src/main/index.js",
     output: {
-        file: "./dist/octopo.min.js",
+        file: "./dist/main/octopo.min.js",
     },
     external: [
         "fs",
