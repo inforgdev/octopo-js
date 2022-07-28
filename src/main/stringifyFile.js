@@ -5,7 +5,7 @@ import stringify from "./stringify.js";
 export function writeFileResolve(data, options) {
     const fileDist = join(options.dirname, options.name + options.extname);
     const targetDir = dirname(fileDist);
-    mkdirSync(targetDir, { recursive: true });
+    mkdirSync(targetDir, { recursive: true, });
     writeFileSync(fileDist, data);
 }
 
@@ -18,7 +18,7 @@ export function handleWriteFile(data, options) {
     function handleDefaultOptions(
         dirname = "./dist/",
         name = "concrete",
-        extname = options.proc.grammar.extname
+        extname = options.proc.grammar.extname,
     ) {
         options.out.file.dirname = dirname;
         options.out.file.name = name;
