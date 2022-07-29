@@ -4,7 +4,11 @@ export default {
     base: '/octopo-js/',
     srcDir: './src/docs',
     outDir: './dist/docs',
-    themeConfig: {
+    themeConfig: themeConfig(),
+}
+
+function themeConfig() {
+    return {
         siteTitle: 'OctopoJS',
         socialLinks: [
             { icon: 'github', link: 'https://github.com/inforgdev/octopo-js' },
@@ -12,5 +16,5 @@ export default {
         footer: {
             copyright: "By Inforg",
         },
-    },
+    };
 }
