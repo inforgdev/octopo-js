@@ -9,7 +9,9 @@ export function writeFileResolve(data, options) {
     writeFileSync(fileDist, data);
 }
 
-export default function stringifyFile(options) {
+export default stringifyFile;
+
+export function stringifyFile(options) {
     const data = stringify(options);
     writeFileResolve(data, options.out.file);
 }

@@ -2,7 +2,9 @@ import { unexpected, propUndefined } from "./logger.js";
 
 let data;
 
-export default function stringify(options) {
+export default stringify;
+
+export function stringify(options) {
     let ast = options.in.data;
     data = options.proc.grammar;
 
