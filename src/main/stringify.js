@@ -8,9 +8,6 @@ export function stringify(options) {
     let ast = options.in.data;
     data = options.proc.grammar;
 
-    if(ast === undefined) return propUndefined("options.in.data");
-    if(data === undefined) return propUndefined("options.proc.grammar");
-
     return $globalStatements(ast, data);
 }
 
@@ -160,6 +157,9 @@ export function $body(node, lang = data) {
 }
 
 export function $globalStatements(ast, lang = data) {
+    if(ast === undefined) return propUndefined("ast");
+    if(lang === undefined) return propUndefined("lang");
+
     let rootC = "";
 
     for(let i in ast) {
