@@ -5,7 +5,9 @@
     "main": "./dist/main/octopo.min.js",
     "type": "module",
     "scripts": {
-        "main:compile": "rollup --config rollup.config.js"
+        "main:compile": "rollup --config rollup.config.js",
+        "docs:dev": "vitepress dev ./",
+        "docs:build": "vitepress build ./"
     },
     "keywords": [
         "css",
