@@ -16,5 +16,8 @@ function themeConfig() {
         footer: {
             copyright: "By Inforg",
         },
+        nav: [
+            { text: 'Get Started', link: '/intro/about' },
+        ],
     };
 }
