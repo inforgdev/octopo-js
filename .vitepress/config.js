@@ -19,5 +19,16 @@ function themeConfig() {
         nav: [
             { text: 'Get Started', link: '/intro/about' },
         ],
+        sidebar: [
+            {
+                text: 'Introduction',
+                collapsible: true,
+                items: [
+                    { text: 'About', link: '/intro/about' },
+                    { text: 'Install', link: '/intro/install' },
+                    { text: 'Usage', link: '/intro/usage' },
+                ],
+            },
+        ],
     };
 }
