@@ -5,6 +5,8 @@ let data;
 export default stringify;
 
 export function stringify(options) {
+    if(options == undefined) return propUndefined("options");
+
     let ast = options.in.data;
     data = options.proc.grammar;
 
