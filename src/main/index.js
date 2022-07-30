@@ -1,5 +1,6 @@
 import octopo from "./methods/octopo.js";
-import * as factory from "./factory.js";
+import * as factory from "./nodes/factory.js";
+import * as stringifier from "./nodes/stringifier.js";
 import * as langs from "./langs/index.js";
 import * as logger from "./logger.js";
 import * as stringify from "./methods/stringify.js";
@@ -11,6 +12,7 @@ export default octopo;
 export {
     octopo,
     factory,
+    stringifier,
     langs,
     logger,
     stringify,
