@@ -1,6 +1,7 @@
 import { writeFileSync, mkdirSync } from "fs";
 import { join, dirname } from "path";
 import stringify from "./stringify.js";
+import optionOutFile from "../options/outFile.js";
 
 export function stringifyFile(options) {
     const data = stringify(options);
@@ -17,18 +18,7 @@ export function writeFileResolve(data, options) {
 }
 
 export function handleWriteFile(data, options) {
-    function handleDefaultOptions(
-        dirname = "./dist/",
-        name = "concrete",
-        extname = options.proc.grammar.extname,
-    ) {
-        options.out.file.dirname = dirname;
-        options.out.file.name = name;
-        options.out.file.extname = extname;
-    }
+    options = optionOutFile(options);
 
-    const fileOptions = options.out.file;
-    handleDefaultOptions(fileOptions.dirname, fileOptions.name, fileOptions.extname);
-
-    writeFileResolve(data, fileOptions);
+    writeFileResolve(data, options.out.file);
 }
