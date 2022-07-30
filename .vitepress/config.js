@@ -27,6 +27,7 @@ function themeConfig() {
                     { text: 'About', link: '/intro/about' },
                     { text: 'Install', link: '/intro/install' },
                     { text: 'Usage', link: '/intro/usage' },
+                    { text: 'Example', link: '/intro/example' },
                 ],
             },
         ],
