@@ -1,5 +1,7 @@
 # Example
 
+Input (*./src/example/example.js*):
+
 ```js
 import octopo, { langs, factory } from "octopo-js";
 const { _var, _val } = factory;
@@ -11,17 +13,30 @@ for(let i = 0; i < 9; i++) {
 
 octopo({
     in: {
-        data: colors,
+        data: colors
     },
     proc: {
-        grammar: langs.scss,
+        data: lang,
     },
     out: {
         file: {
-            dirname: "./src/example/simple/dest",
+            dirname: "./src/example/",
             name: "example",
-        },
-        print: true,
+        }
     },
 });
+```
+
+Output (*./src/example/example.scss*):
+
+```scss
+$gray-0: #000;
+$gray-1: #111;
+$gray-2: #222;
+$gray-3: #333;
+$gray-4: #444;
+$gray-5: #555;
+$gray-6: #666;
+$gray-7: #777;
+$gray-8: #888;
 ```
