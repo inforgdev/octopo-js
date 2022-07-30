@@ -1,8 +1,5 @@
-import { unexpected, propUndefined } from "./logger.js"; 
-
+import { unexpected, propUndefined } from "../logger.js"; 
 let data;
-
-export default stringify;
 
 export function stringify(options) {
     if(options == undefined) return propUndefined("options");
@@ -12,6 +9,8 @@ export function stringify(options) {
 
     return $globalStatements(ast, data);
 }
+
+export default stringify;
 
 export function $ref(node, lang = data) {
     if(node.type !== "ref") return unexpected(node);
