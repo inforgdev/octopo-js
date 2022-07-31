@@ -47,7 +47,7 @@ data: [
 ]
 ```
 
-For more details, check out [data](/api/data). 
+For more details, check out [nodes](/api/nodes). 
 
 ## **proc**: object
 
