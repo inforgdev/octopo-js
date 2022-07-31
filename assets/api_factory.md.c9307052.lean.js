@@ -1,1 +1,0 @@
-import{_ as s,c as a,o as t,a as o}from"./app.39aef179.js";const u=JSON.parse('{"title":"Factory","description":"","frontmatter":{},"headers":[{"level":2,"title":"Utils","slug":"utils"}],"relativePath":"api/factory.md"}'),n={name:"api/factory.md"},l=o("",11),p=[l];function e(r,c,F,d,D,y){return t(),a("div",null,p)}var h=s(n,[["render",e]]);export{u as __pageData,h as default};
