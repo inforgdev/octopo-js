@@ -34,7 +34,7 @@ function themeConfig() {
                 text: 'API',
                 collapsible: true,
                 items: [
-                    { text: 'Introduction', link: '/api/index' },
+                    { text: 'Introduction', link: '/api/' },
                     { text: 'Options', link: '/api/options' },
                     { text: 'Methods', link: '/api/methods' },
                     { text: 'Nodes', link: '/api/nodes' },
