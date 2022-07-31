@@ -30,6 +30,18 @@ function themeConfig() {
                     { text: 'Example', link: '/intro/example' },
                 ],
             },
+            {
+                text: 'API',
+                collapsible: true,
+                items: [
+                    { text: 'Introduction', link: '/api/index' },
+                    { text: 'Options', link: '/api/options' },
+                    { text: 'Methods', link: '/api/methods' },
+                    { text: 'Nodes', link: '/api/nodes' },
+                    { text: 'Factory', link: '/api/factory' },
+                    { text: 'Grammars', link: '/api/grammars' },
+                ],
+            },
         ],
     };
 }
