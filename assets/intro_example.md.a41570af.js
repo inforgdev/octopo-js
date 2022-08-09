@@ -11,7 +11,7 @@ import{_ as s,c as a,o as n,a as p}from"./app.ab0f998e.js";const i=JSON.parse('{
 <span class="line"><span style="color:#A6ACCD;">        </span><span style="color:#F07178;">data</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> colors</span></span>
 <span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#89DDFF;">},</span></span>
 <span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#F07178;">proc</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span></span>
-<span class="line"><span style="color:#A6ACCD;">        </span><span style="color:#F07178;">data</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> lang</span><span style="color:#89DDFF;">,</span></span>
+<span class="line"><span style="color:#A6ACCD;">        </span><span style="color:#F07178;">grammar</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> langs</span><span style="color:#89DDFF;">.</span><span style="color:#A6ACCD;">scss</span><span style="color:#89DDFF;">,</span></span>
 <span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#89DDFF;">},</span></span>
 <span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#F07178;">out</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span></span>
 <span class="line"><span style="color:#A6ACCD;">        </span><span style="color:#F07178;">file</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span></span>
@@ -29,4 +29,4 @@ import{_ as s,c as a,o as n,a as p}from"./app.ab0f998e.js";const i=JSON.parse('{
 <span class="line"><span style="color:#A6ACCD;">$gray-6</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">#</span><span style="color:#A6ACCD;">666</span><span style="color:#89DDFF;">;</span></span>
 <span class="line"><span style="color:#A6ACCD;">$gray-7</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">#</span><span style="color:#A6ACCD;">777</span><span style="color:#89DDFF;">;</span></span>
 <span class="line"><span style="color:#A6ACCD;">$gray-8</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">#</span><span style="color:#A6ACCD;">888</span><span style="color:#89DDFF;">;</span></span>
-<span class="line"></span></code></pre></div>`,5),e=[o];function c(t,D,r,y,F,A){return n(),a("div",null,e)}var _=s(l,[["render",c]]);export{i as __pageData,_ as default};
+<span class="line"></span></code></pre></div>`,5),e=[o];function c(t,D,r,y,F,A){return n(),a("div",null,e)}var m=s(l,[["render",c]]);export{i as __pageData,m as default};
