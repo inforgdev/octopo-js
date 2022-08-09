@@ -16,7 +16,7 @@ octopo({
         data: colors
     },
     proc: {
-        data: lang,
+        grammar: langs.scss,
     },
     out: {
         file: {
