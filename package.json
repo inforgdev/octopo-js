@@ -23,6 +23,7 @@
         "Luis Float <contact@luisfloat.com> (https://luisfloat.com)"
     ],
     "homepage": "https://github.com/inforgdev/octopo-js",
+    "repo": "github:inforgdev/octopo-js",
     "license": "SEE LICENSE IN LICENSE.md",
     "devDependencies": {
         "rollup": "^2.76.0",
