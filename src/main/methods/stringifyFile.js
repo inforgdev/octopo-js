@@ -1,24 +1,25 @@
-import { writeFileSync, mkdirSync } from "fs";
-import { join, dirname } from "path";
 import stringify from "./stringify.js";
 import optionOutFile from "../options/outFile.js";
+import { dummyProc, mkfile, val, vesic } from "vesic-js";
 
-export function stringifyFile(options) {
-    const data = stringify(options);
-    writeFileResolve(data, options.out.file);
-}
-
-export default stringifyFile;
-
-export function writeFileResolve(data, options) {
-    const fileDist = join(options.dirname, options.name + options.extname);
-    const targetDir = dirname(fileDist);
-    mkdirSync(targetDir, { recursive: true, });
-    writeFileSync(fileDist, data);
+export function vesicMkfile(data, options) {
+    vesic({
+        src: val(data),
+        proc: dummyProc,
+        sink: mkfile,
+        meta: {
+            path: options.out.file,
+        }
+    });
 }
 
 export function handleWriteFile(data, options) {
-    options = optionOutFile(options);
-
-    writeFileResolve(data, options.out.file);
+    vesicMkfile(data, optionOutFile(options));
 }
+
+export function stringifyFile(options) {
+    const data = stringify(options);
+    handleWriteFile(data, options);
+}
+
+export default stringifyFile;
