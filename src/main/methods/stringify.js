@@ -1,4 +1,4 @@
-import { ret } from "vesic-js";
+import { ret, val, vesic } from "vesic-js";
 import { propUndefined } from "../logger.js"; 
 import { $globalStatements } from "../nodes/stringifier.js";
 
@@ -11,7 +11,7 @@ export function stringify(options) {
 
     return vesic({
         src: val(options.in.data),
-        proc: octopoProc,
+        proc: stringifyProc,
         sink: ret,
         meta: {
             grammar: options.proc.grammar,
