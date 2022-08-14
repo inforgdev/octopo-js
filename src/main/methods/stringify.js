@@ -1,14 +1,23 @@
+import { ret } from "vesic-js";
 import { propUndefined } from "../logger.js"; 
 import { $globalStatements } from "../nodes/stringifier.js";
-let data;
+
+export function stringifyProc() {
+    return (data, meta) => $globalStatements(data, meta.grammar);
+}
 
 export function stringify(options) {
     if(options == undefined) return propUndefined("options");
 
-    let ast = options.in.data;
-    data = options.proc.grammar;
-
-    return $globalStatements(ast, data);
+    return vesic({
+        src: val(options.in.data),
+        proc: octopoProc,
+        sink: ret,
+        meta: {
+            grammar: options.proc.grammar,
+            path: options.out.file,
+        }
+    }); 
 }
 
 export default stringify;
