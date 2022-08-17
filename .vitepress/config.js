@@ -5,7 +5,7 @@ export default {
     srcDir: './src/docs',
     outDir: './dist/docs',
     themeConfig: themeConfig(),
-}
+};
 
 function themeConfig() {
     return {
