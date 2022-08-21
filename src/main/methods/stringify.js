@@ -2,8 +2,8 @@ import { ret, val, vesic } from "vesic-js";
 import { propUndefined } from "../logger.js"; 
 import { $globalStatements } from "../nodes/stringifier.js";
 
-export function stringifyProc() {
-    return (data, meta) => $globalStatements(data, meta.grammar);
+export function stringifyProc(data, meta) {
+    return $globalStatements(data, meta.grammar);
 }
 
 export function stringify(options) {
