@@ -1,11 +1,11 @@
 import stringify from "./stringify.js";
 import optionOutFile from "../options/outFile.js";
-import { dummyProc, mkfile, val, vesic } from "vesic-js";
+import { bypass, mkfile, val, vesic } from "vesic-js";
 
 export function vesicMkfile(data, options) {
     vesic({
         src: val(data),
-        proc: dummyProc,
+        proc: bypass,
         sink: mkfile,
         meta: {
             path: options.out.file,
