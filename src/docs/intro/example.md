@@ -3,7 +3,7 @@
 Input (*./src/example/example.js*):
 
 ```js
-import octopo, { langs, factory } from "octopo-js";
+import { langs, factory, stringifyProc } from "octopo-js";
 const { _var, _val } = factory;
 
 const colors = [];
@@ -11,23 +11,14 @@ for(let i = 0; i < 9; i++) {
     colors.push(_var("gray-" + i, _val(`#${i}${i}${i}`)));
 }
 
-octopo({
-    in: {
-        data: colors
-    },
-    proc: {
-        grammar: langs.scss,
-    },
-    out: {
-        file: {
-            dirname: "./src/example/",
-            name: "example",
-        }
-    },
+const output = stringifyProc(colors, {
+    grammar: langs.scss,
 });
+
+console.log(output);
 ```
 
-Output (*./src/example/example.scss*):
+Output (*Console*):
 
 ```scss
 $gray-0: #000;
