@@ -1,6 +1,6 @@
 {
     "name": "octopo-js",
-    "version": "0.26.4",
+    "version": "0.27.0",
     "description": "OctopoJS is a CSS preprocessor AST stringifier.",
     "main": "./dist/main/octopo.min.js",
     "type": "module",
@@ -32,7 +32,6 @@
         "rollup": "^2.76.0",
         "rollup-plugin-node-resolve": "^5.2.0",
         "rollup-plugin-terser": "^7.0.2",
-        "vesic-js": "github:inforgdev/vesic-js",
         "vitepress": "^1.0.0-alpha.4",
         "vue": "^3.2.37"
     }
