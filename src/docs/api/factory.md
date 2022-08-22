@@ -40,5 +40,5 @@ Name                         | Description                 | Example (SCSS)
 
 Name                      | Description               | Example
 --------------------------|---------------------------|-------------------------------------
-`args(...expressions)`    | multiple `arg` util       | `_args(val("24px"), val("24px"))`
-`params(...expressions)`  | multiple `param` util     | `_params(["w", "24px"], ["h", "24px"])`
+`_args(...expressions)`    | multiple `arg` util       | `_args(val("24px"), val("24px"))`
+`_params(...expressions)`  | multiple `param` util     | `_params(["w", "24px"], ["h", "24px"])`
