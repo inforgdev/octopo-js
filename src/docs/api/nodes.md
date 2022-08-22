@@ -1,6 +1,6 @@
 # Nodes
 
-The nodes are object that represent the node in the syntax tree.
+The nodes are objects that respectively represent the nodes in the syntax tree.
 
 Name  | Description                 | Example (SCSS)       | Example (LESS)
 ------|-----------------------------|----------------------|-----------------
