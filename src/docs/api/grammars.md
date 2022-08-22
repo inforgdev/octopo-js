@@ -8,8 +8,8 @@ Variable     | Description
 -------------|----------
 `langs.scss` | SCSS 
 `langs.styl` | Stylus
-`langs.less` | Less
-`langs.lessMin` | Less Minified
+`langs.less` | LESS
+`langs.lessMin` | LESS Minified
 
 These variables can be accessed by: 
 
@@ -21,7 +21,7 @@ import { langs } from "octopo-js";
 
 To create a custom grammar, just create a object and use these available keys:
 
-Key                    | Description                   | Example (less)
+Key                    | Description                   | Example (LESS)
 -----------------------|-------------------------------|-------------------------
 declaration | |
 `var`                  | Variable declaration          | `"@_NAME_: _EXPRESSION_"`

@@ -2,7 +2,7 @@
 
 The nodes are object that represent the node in the syntax tree.
 
-Name  | Description                 | Example (SCSS)       | Example (less)
+Name  | Description                 | Example (SCSS)       | Example (LESS)
 ------|-----------------------------|----------------------|-----------------
 call  | Mixin call                  | `@include example()` | `.example()`
 arg   | Mixin call argument         | `10px`               | `10px`
