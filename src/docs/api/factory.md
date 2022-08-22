@@ -25,7 +25,7 @@ Example output:
 
 ## Available Base Functions
 
-Name                         | Description                 | Example (SCSS)       
+Name                         | Description                 | Example      
 -----------------------------|-----------------------------|-----------------------------------
 `_call(name, args)`          | Mixin call                  | `_call("example", _args(["arg1"]))` 
 `_arg(expression)`           | Mixin call argument         | `_arg(_val("24px"))`               
