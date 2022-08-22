@@ -1,4 +1,4 @@
-import { $globalStatements } from "./stringifier.js";
+import { $globalStatements } from "./nodes/stringifier.js";
 
 function stringifyProc(data, meta) {
     return $globalStatements(data, meta.grammar);
