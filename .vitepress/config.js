@@ -35,7 +35,6 @@ function themeConfig() {
                 collapsible: true,
                 items: [
                     { text: 'Introduction', link: '/api/' },
-                    { text: 'Options', link: '/api/options' },
                     { text: 'Nodes', link: '/api/nodes' },
                     { text: 'Factory', link: '/api/factory' },
                     { text: 'Grammars', link: '/api/grammars' },
