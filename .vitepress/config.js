@@ -36,7 +36,6 @@ function themeConfig() {
                 items: [
                     { text: 'Introduction', link: '/api/' },
                     { text: 'Options', link: '/api/options' },
-                    { text: 'Methods', link: '/api/methods' },
                     { text: 'Nodes', link: '/api/nodes' },
                     { text: 'Factory', link: '/api/factory' },
                     { text: 'Grammars', link: '/api/grammars' },
