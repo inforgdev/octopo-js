@@ -38,6 +38,7 @@ function themeConfig() {
                     { text: 'Nodes', link: '/api/nodes' },
                     { text: 'Factory', link: '/api/factory' },
                     { text: 'Grammars', link: '/api/grammars' },
+                    { text: 'Processors', link: '/api/processors' },
                 ],
             },
         ],
