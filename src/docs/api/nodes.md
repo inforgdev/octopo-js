@@ -1,6 +1,6 @@
 # Nodes
 
-The nodes are object the abstract language concepts.
+The nodes are object that represent the node in the syntax tree.
 
 Name  | Description                 | Example (SCSS)       | Example (less)
 ------|-----------------------------|----------------------|-----------------
@@ -13,4 +13,4 @@ ref   | Variable reference          | `$blue`              | `@blue`
 mixin | Mixin declaration           | `@mixin example() {}`| `.example() {}`
 param | Mixin parameter declaration | `$color`             | `@color`
 
-There are available a lot of factory functions to respective nodes. Similar to it, there are also stringifiers that convert the node to string.
+There are available a lot of factory functions to respective nodes. Similar to it, there are also stringifiers that generate a string from the node.
