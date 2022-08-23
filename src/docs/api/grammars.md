@@ -11,6 +11,7 @@ Variable     | Description
 `langs.less` | LESS
 `langs.lessMin` | LESS Minified
 `langs.scssMin` | SCSS Minified
+`langs.stylMin` | Stylus Minified
 
 These variables can be accessed by: 
 
