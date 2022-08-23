@@ -3,6 +3,7 @@ import lessMin from "./lessMin.js";
 import scss from "./scss.js";
 import scssMin from "./scssMin.js";
 import styl from "./styl.js";
+import stylMin from "./stylMin.js";
 
 export {
     less,
@@ -10,4 +11,5 @@ export {
     scss,
     scssMin,
     styl,
+    stylMin,
 };
