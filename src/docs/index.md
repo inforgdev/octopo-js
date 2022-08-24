@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: OctopoJS
-  tagline: OctopoJS is a CSS preprocessor AST stringifier
+  tagline: OctopoJS is a CSS preprocessor language agnostic AST stringifier
   actions:
     - theme: brand
       text: Get Started
