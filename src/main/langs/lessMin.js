@@ -22,7 +22,7 @@ export default {
     //style
 
     statementEnd: ";",
-    needLastStatementEnd: false,
+    needLastStatementEnd: true,
     indent: "",
     needBrln: false,
     wordSep: "-",
