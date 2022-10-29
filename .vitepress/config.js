@@ -2,7 +2,7 @@ export default {
     title: 'OctopoJS',
     description: 'OctopoJS Website',
     base: '/octopo-js/',
-    srcDir: './src/docs',
+    srcDir: './src/docs/views/',
     outDir: './dist/docs',
     themeConfig: themeConfig(),
 };
