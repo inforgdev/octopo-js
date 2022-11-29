@@ -12,7 +12,7 @@ export default {
     call: "._NAME_(_ARGS_)",
     ref: "@_NAME_",
     val: "_NAME_",
-    arg: "",
+    arg: "_EXPRESSION_",
 
     //artifacts
     
