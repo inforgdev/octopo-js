@@ -1,15 +1,13 @@
-import * as factory from "./nodes/factory.js";
-import * as stringifier from "./nodes/stringifier.js";
+import { generator, generate, generateMatches, prod } from "./core/generator.js";
+import { tmpl, render } from "./core/tmpl.js";
 import * as langs from "./langs/index.js";
-import * as logger from "./logger.js";
-import stringifyProc from "./stringifyProc.js";
-
-export default stringifyProc;
+import * as errors from "./core/errors.js";
 
 export {
-    factory,
-    stringifier,
+    generator, generate, generateMatches, prod,
+    tmpl, render,
     langs,
-    logger,
-    stringifyProc,
+    errors,
 };
+
+export * from "./productions/index.js";
