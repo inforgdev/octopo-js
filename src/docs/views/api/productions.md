@@ -1,6 +1,6 @@
-# Nodes
+# Productions
 
-The nodes are objects that respectively represent the nodes in the syntax tree.
+The productions are objects that respectively represent the nodes in the syntax tree.
 
 Name  | Description                 | Example (SCSS)       | Example (LESS)
 ------|-----------------------------|----------------------|-----------------
@@ -13,4 +13,4 @@ ref   | Variable reference          | `$blue`              | `@blue`
 mixin | Mixin declaration           | `@mixin example() {}`| `.example() {}`
 param | Mixin parameter declaration | `$color`             | `@color`
 
-There are available a lot of factory functions to respective nodes. Similar to it, there are also stringifiers that generate a string from the node.
+There are available a lot of factory functions to respective productions. Similar to it, there are also generators that generate a string from the node and template.

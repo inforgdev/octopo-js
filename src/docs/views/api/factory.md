@@ -25,7 +25,7 @@ Example output:
 
 ## Available Base Functions
 
-Name                         | Description                 | Example      
+Name                         | Description                 | Example
 -----------------------------|-----------------------------|-----------------------------------
 `_call(name, args)`          | Mixin call                  | `_call("example", _args(["arg1"]))` 
 `_arg(expression)`           | Mixin call argument         | `_arg(_val("24px"))`               
@@ -40,5 +40,5 @@ Name                         | Description                 | Example
 
 Name                      | Description               | Example
 --------------------------|---------------------------|-------------------------------------
-`_args(...expressions)`    | multiple `arg` util       | `_args(val("24px"), val("24px"))`
-`_params(...expressions)`  | multiple `param` util     | `_params(["w", "24px"], ["h", "24px"])`
+`_args(...expressions)`   | multiple `arg` util       | `_args(val("24px"), val("24px"))`
+`_params(...expressions)` | multiple `param` util     | `_params(["w", "24px"], ["h", "24px"])`

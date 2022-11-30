@@ -1,19 +1,19 @@
 # Grammars
 
-The grammar defines how the node will be stringified.
+The grammar defines how the node will be generated.
 
 There are these languages available:
 
-Variable     | Description     
--------------|----------
-`langs.scss` | SCSS 
-`langs.styl` | Stylus
-`langs.less` | LESS
+Variable        | Description     
+----------------|----------
+`langs.scss`    | SCSS 
+`langs.styl`    | Stylus
+`langs.less`    | LESS
 `langs.lessMin` | LESS Minified
 `langs.scssMin` | SCSS Minified
 `langs.stylMin` | Stylus Minified
 
-These variables can be accessed by: 
+These properties can be accessed by:
 
 ```js
 import { langs } from "octopo-js";
@@ -25,21 +25,21 @@ To create a custom grammar, just create a object and use these available keys:
 
 Key                    | Description                   | Example (LESS)
 -----------------------|-------------------------------|-------------------------
-declaration | |
+declaration            |                               |
 `var`                  | Variable declaration          | `"@_NAME_: _EXPRESSION_"`
 `mixin`                | Mixin declaration             | `"._NAME_(_PARAMS_) {\n_BODY_}"`
 `dec`                  | Property declaration          | `"_PROP_: _VALUE_"`
 `param`                | Parameter declaration         | `"@_NAME_"`
 `paramDefault`         | Mixin parameter declaration   | `"@_NAME_: _DEFAULT_"`
-expression | |
+expression             |                               |
 `call`                 | Mixin call                    | `"._NAME_(_ARGS_)"`
 `ref`                  | Variable reference            | `"@_NAME_"`
 `val`                  | Value                         | `"_NAME_"`
 `arg`                  | Argument                      | `""`
-artifacts | |
+artifacts              |                               |
 `argSep`               | Argument separator            | `","`
 `paramSep`             | Parameter separator           | `", "`
-style | |
+style                  |                               |
 `statementEnd`         | Statement end                 | `";"`
 `needLastStatementEnd` | Is last statement end needed? | `true`
 `indent`               | Identation                    | `"  "`

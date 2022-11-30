@@ -24,10 +24,10 @@ export default {
             text: 'API',
             collapsible: true,
             items: [
-                { text: 'Nodes', link: '/api/nodes' },
+                { text: 'Productions', link: '/api/productions' },
                 { text: 'Factory', link: '/api/factory' },
+                { text: 'Generator', link: '/api/generator' },
                 { text: 'Grammars', link: '/api/grammars' },
-                { text: 'Processors', link: '/api/processors' },
             ],
         },
     ],
