@@ -11,5 +11,5 @@
   <br/>
   <br/>
   </table>
-  <p align="center">OctopoJS is a language agnostic CSS generator.</p>
+  <p align="center">Language agnostic CSS generator.</p>
 </div>
