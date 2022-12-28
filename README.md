@@ -1,7 +1,7 @@
 # OctopoJS
 
 <div align="center">
-  <img src="src/docs/assets/logo.png" width="128" height="128"/>
+  <img src="docs/assets/logo.png" width="128" height="128"/>
   <br/>
   OctopoJS •
   <a href="https://inforg.dev/octopo-js">🌐 Website</a> •
