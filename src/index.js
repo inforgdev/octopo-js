@@ -1,13 +1,5 @@
-import { generator, generate, generateMatches, prod } from "./core/generator.js";
-import { tmpl, render } from "./core/tmpl.js";
-import * as langs from "./langs/index.js";
-import * as errors from "./core/errors.js";
-
-export {
-    generator, generate, generateMatches, prod,
-    tmpl, render,
-    langs,
-    errors,
-};
-
+export * as langs from "./langs/index.js";
+export * as errors from "./core/errors.js";
 export * from "./productions/index.js";
+export * from "./core/tmpl.js";
+export * from "./core/generator.js";

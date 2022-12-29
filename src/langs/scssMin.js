@@ -1,4 +1,4 @@
-export default {
+export const scssMin = {
     //declaration
 
     var: "$_NAME_:_EXPRESSION_",

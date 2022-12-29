@@ -1,4 +1,4 @@
-export default {
+export const styl = {
     //declaration
 
     var: "_NAME_ = _EXPRESSION_",
