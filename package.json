@@ -3,6 +3,7 @@
     "version": "0.30.1",
     "description": "OctopoJS is a CSS preprocessor AST stringifier.",
     "main": "./dist/octopo.min.js",
+    "types": "./types/index.d.ts",
     "type": "module",
     "scripts": {
         "main:build": "rollup --config rollup.config.js",
