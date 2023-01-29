@@ -33,7 +33,7 @@
         "rollup": "^2.76.0",
         "rollup-plugin-node-resolve": "^5.2.0",
         "rollup-plugin-terser": "^7.0.2",
-        "vitepress": "^1.0.0-alpha.29",
+        "vitepress": "^1.0.0-alpha.40",
         "vue": "^3.2.37"
     }
 }
