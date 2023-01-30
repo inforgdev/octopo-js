@@ -5,4 +5,5 @@ CONTRIBUTING.md
 node_modules
 .vscode
 src
+docs
 rollup.config.js
